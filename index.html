@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>IMC - Índice de Massa Corporal </h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div>
+                <h2>O que é IMC?</h2>
+
+                <p>O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está dentro de uma faixa de peso saudável, considerando sua altura e peso. Calculado pela fórmula IMC = peso (kg) / altura² (m²), o IMC é uma ferramenta simples para identificar possíveis riscos à saúde associados ao excesso ou à falta de peso. Ele classifica os resultados em diferentes faixas, como abaixo do peso, peso normal, sobrepeso e obesidade, sendo útil para monitorar a saúde geral, mas não leva em conta fatores como a composição corporal (massa muscular e gordura).</p>
+
+                <table>
+                    <p2>Entenda seu resultado</p2>
+                    <thead>
+                        <tr>
+                            <th>Obesidade grau 3 (Acima de 40,0)</th>
+                            <th>Obesidade grau 2 (Entre 35,0 e 39,9)</th>
+                            <th>Obesidade grau 1 (Entre 30,0 e 34,9)</th>
+                            <th>Sobrepeso (Entre 25,0 e 29,9)</th>
+                            <th>Normal (Entre 18,6 e 24,9)</th>
+                            <th>Abaixo do peso normal (18,5 ou menos)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aqui o sinal é vermelho, com forte probabilidade de já existirem doenças muito graves associadas. O tratamento deve ser ainda mais urgente.</td>
+                        
+                    
+                            <td>Mesmo que seus exames aparentem estar normais, é hora de se cuidar, iniciando mudanças no estilo de vida com o acompanhamento próximo de profissionais de saúde.</td>
+                        
+                    
+                            <td>Sinal de alerta! Chegou na hora de se cuidar, mesmo que seus exames sejam normais. Vamos dar início a mudanças hoje! Cuide de sua alimentação. Você precisa iniciar um acompanhamento com nutricionista e/ou endocrinologista.</td>
+                    
+                        
+                            <td>Ele é, na verdade, uma pré-obesidade e muitas pessoas nessa faixa já apresentam doenças associadas, como diabetes e hipertensão. Importante rever hábitos e buscar ajuda antes de, por uma série de fatores, entrar na faixa da obesidade pra valer.</td>
+                       
+
+                            <td>Que bom que você está com o peso normal! E o melhor jeito de continuar assim é mantendo um estilo de vida ativo e uma alimentação equilibrada.</td>
+                        
+                            
+                            <td>Procure um médico. Algumas pessoas têm um baixo peso por características do seu organismo e tudo bem. Outras podem estar enfrentando problemas, como a desnutrição. É preciso saber qual é o caso.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+
+    <h2>Calculdora IMC</h2>
+
+    <label for="altura"> Altura:</label>
+    <input type="number" name="altura" id="altura">
+
+    <label for="peso"> Peso (kg):</label>
+    <input type="number" name="peso" id="peso">
+
+    <button onclick="calcImc()">Calcular IMC</button>
+
+    <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+    <script>
+        function calcImc(){
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+            const resultado = peso / (altura**2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+    </script>
+
+    <footer>&copy; Todos os direitos reservador para Alicia Freitas</footer>
+</body>
+</html>
